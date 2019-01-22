@@ -29,6 +29,7 @@ var (
 		"num_docs":     "num_docs",
 		"deleted_docs": "deleted_docs",
 		"max_docs":     "max_docs",
+		"version":		"version",
 	}
 	gaugeQueryMetrics = map[string]string{
 		"15min_rate_reqs_per_second": "15min_rate_reqs_per_second",

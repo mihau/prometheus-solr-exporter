@@ -29,6 +29,7 @@ type Core struct {
 		DeletedDocs int `json:"deletedDocs"`
 		MaxDoc      int `json:"maxDoc"`
 		NumDocs     int `json:"numDocs"`
+		Version		int `json:"version"`
 	} `json:"stats"`
 }
 

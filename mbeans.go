@@ -45,6 +45,7 @@ func processMbeans(e *Exporter, coreName string, data io.Reader) []error {
 		e.gaugeCore["deleted_docs"].WithLabelValues(coreName, name, metrics.Class).Set(float64(metrics.Stats.DeletedDocs))
 		e.gaugeCore["max_docs"].WithLabelValues(coreName, name, metrics.Class).Set(float64(metrics.Stats.MaxDoc))
 		e.gaugeCore["num_docs"].WithLabelValues(coreName, name, metrics.Class).Set(float64(metrics.Stats.NumDocs))
+		e.gaugeCore["version"].WithLabelValues(coreName, name, metrics.Class).Set(float64(metrics.Stats.Version))
 	}
 
 	b := bytes.Replace(findMBeansData(mBeansData.SolrMbeans, "QUERY"), []byte(":\"NaN\""), []byte(":0.0"), -1)
